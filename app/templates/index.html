@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    p {
+        word-spacing: 5px
+        }
+</style>
+<body>
+<h1>Washington Capitals Roster, December 2019</h1>
+
+<ul>
+    <h3>Offense</h3>
+    {% for player in players["offense"] %}
+            <p>{{ player[0] }},     {{ player[1] }}  {{ player[2] }}<br>
+                Number: {{ player[3] }} Position: {{ player[4] }} Shoots: {{ player[5] }} Height: {{ player[6] }} Weight:
+                {{ player[7] }}</p>
+    {% endfor %}
+</ul>
+
+    <ul>
+    <h3>Defense</h3>
+    {% for player in players["defense"] %}
+            <p>{{ player[0] }},  {{ player[1] }}  {{ player[2] }}<br>  Number: {{ player[3] }}
+                Position: {{ player[4] }}   Shoots: {{ player[5] }}   Height: {{ player[6] }}   Weight:
+                {{ player[7] }}</p>
+    {% endfor %}
+</ul>
+
+    <ul>
+    <h3>Goalies</h3>
+    {% for player in players["goalies"] %}
+    <p>{{ player[0] }},  {{ player[1] }}  {{ player[2] }}<br>  Number: {{ player[3] }}
+        Position: {{ player[4] }}   Shoots: {{ player[5] }}   Height: {{ player[6] }}   Weight: {{ player[7] }}</p>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
